@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import Navbar from "../shared/Navbar";
 import "./ResourcesPage.css"; // CSS file for custom styling
 
-const ResourcesPage = () => {
+function ResourcesPage(){
   return (
     <div>
       

@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ExperiencesPage.css"; // CSS file for custom styling
 
-const ExperiencesPage = () => {
+function ExperiencesPage(){
   return (
     <div>
       

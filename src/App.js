@@ -7,6 +7,10 @@ import Adminhome from './components/admin/Adminhome';
 import Userdashboard from './components/user/userdashboard';
 import UserProfile from './components/user/userprofile';
 import Outpass from './components/admin/outpass';
+import AboutPage from './components/user/AboutPage';
+import ExperiencesPage from './components/user/ExperiencesPage';
+import ResourcesPage from './components/user/ResourcesPage';
+import ContactPage from './components/user/ContactPage';
 
 function App() {
   return (
@@ -19,6 +23,11 @@ function App() {
         <Route path="/user-dashboard" element={<Userdashboard />} />
         <Route path="/profile" element={<UserProfile />} />
         <Route path="/outpass" element={<Outpass />} />
+        <Route path="/experiences" element={<ExperiencesPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route pathh="/resources" element={<ResourcesPage />}/>
+        <Route pathh="contact" element={<ContactPage />}/>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

@@ -2,7 +2,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./ContactPage.css"; // CSS file for custom styling
 
-const ContactPage = () => {
+function ContactPage() {
   return (
     <div>
       

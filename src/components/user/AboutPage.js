@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./HomePage.css";
 import "./AboutPage.css";
 
-const AboutPage = () => {
+function AboutPage() {
   return (
     <div>
       
