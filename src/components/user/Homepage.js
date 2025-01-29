@@ -40,6 +40,19 @@ const HomePage = () => {
             <li className="nav-item"><a className="nav-link" href="/resources">Resources</a></li>
             <li className="nav-item"><a className="nav-link" href="/contact">Contact</a></li>
           </ul>
+          <div className="profile" onClick={toggleDropdown}>
+          <div className="profile-icon">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Profile" />
+          </div>
+          <p>User</p>
+          {dropdown && (
+            <ul className="dropdown-menu dropdown-menu-show">
+              <li><Link to="/profile">Profile</Link></li>
+              <li><Link to="/login">Logout</Link></li>
+
+            </ul>
+          )}
+        </div>
         </div>
       </nav>
       

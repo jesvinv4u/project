@@ -25,7 +25,7 @@ function App() {
       
       
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/admin" element={<Adminhome />} />
@@ -38,7 +38,7 @@ function App() {
         <Route path="/resources" element={<ResourcesPage />}/>
         <Route path="/contact" element={<ContactPage />}/>
         <Route path="*" element={<Navigate to="/" />} />
-        <Route path="/" element={<Homepage />} />
+        <Route path="/home" element={<Homepage />} />
         <Route path="/bookroom" element={<BookRoom />} />
         <Route path="/changeroom" element={<ChangeRoom />} />
         <Route path="/outpass" element={<GenerateOutPass />} />

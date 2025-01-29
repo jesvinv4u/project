@@ -11,6 +11,19 @@
   text-align: center;
 }
 
+.profile {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 10px; /* Adds space between User text and profile image */
+  cursor: pointer;
+}
+
+.profile-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 /* Discover Section */
 .discover-section {
   background-color: #f8f9fa;
