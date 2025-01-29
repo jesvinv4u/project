@@ -35,8 +35,14 @@ function App() {
         <Route path="/outpass" element={<Outpass />} />
         <Route path="/experiences" element={<ExperiencesPage />} />
         <Route path="/about" element={<AboutPage />} />
+<<<<<<< HEAD
         <Route path="/resources" element={<ResourcesPage />}/>
         <Route path="/contact" element={<ContactPage />}/>
+=======
+        <Route path="/about" element={<AboutPage />} />
+        <Route pathh="/resources" element={<ResourcesPage />}/>
+        <Route pathh="contact" element={<ContactPage />}/>
+>>>>>>> 05c0bc64753f424e4b3453a5b009823d6016cb55
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/bookroom" element={<BookRoom />} />

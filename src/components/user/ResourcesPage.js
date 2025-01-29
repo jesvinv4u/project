@@ -5,7 +5,10 @@ import "./ResourcesPage.css"; // CSS file for custom styling
 import { useNavigate } from "react-router-dom"; 
 
 function ResourcesPage(){
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> 05c0bc64753f424e4b3453a5b009823d6016cb55
   return (
     <div>
       {/* Navbar */}
