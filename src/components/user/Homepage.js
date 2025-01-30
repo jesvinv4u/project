@@ -1,18 +1,25 @@
-import React from "react";
-// import { Link } from "react-router-dom"; 
+import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "./HeroSection.css"; 
 import "bootstrap/dist/css/bootstrap.min.css";
 import './Homepage.css';
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { FaUserCircle } from "react-icons/fa";
+
 const HomePage = () => {
   const navigate = useNavigate();
+
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const handleDropdownToggle = () => {
+    setDropdownOpen(!dropdownOpen);
+};
 
   useEffect(() => {
     const isAuthenticated = localStorage.getItem("isAuthenticated");
     if (!isAuthenticated) {
-        navigate("/login"); // ✅ Redirect to login if not logged in
+        navigate("/login"); // Redirect to login if not logged in
     }
 }, [navigate]);
 
@@ -20,7 +27,7 @@ const HomePage = () => {
     <div>
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light px-5">
-        <a className="navbar-brand">Hostel Hub</a>
+        <a className="navbar-brand"><b>Hostel Hub</b></a>
         <button
           className="navbar-toggler"
           type="button"
@@ -54,6 +61,30 @@ const HomePage = () => {
           )}
         </div>
         </div>
+        <div className="relative">
+                <FaUserCircle 
+                    size={32} 
+                    className="cursor-pointer text-gray-700"
+                    onClick={handleDropdownToggle}
+                />
+                {dropdownOpen && (
+                    <div className="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg">
+                        <Link to="/profile" className="block px-4 py-2 hover:bg-gray-100">
+                            Profile
+                        </Link>
+                        <Link to="/Logout" className="block px-4 py-2 hover:bg-gray-100">
+                            Logout
+                        </Link>
+
+                        {/* <button 
+                            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+                            onClick={() => alert("Logging out...")}
+                        >
+                            Logout
+                        </button> */}
+                    </div>
+                )}
+            </div>
       </nav>
       
 
@@ -110,8 +141,6 @@ const HomePage = () => {
       <button className="btn btn-light hero-button" onClick={() => navigate("/bookroom")}>Book Now</button>
     </section>
     <div>
-      {/* <h1>Welcome to the Hostel Management System</h1> */}
-      {/* <button onClick={() => navigate("/bookroom")}>Book Now</button> */}
     </div>
 
     <div className="row text-center mt-4">
@@ -125,7 +154,7 @@ const HomePage = () => {
       </div>
       <div className="col-md-6 col-lg-3 mb-4">
         <div className="card feature-card">
-          <h5 className="card-title" onClick={() => navigate("/generateoutpass")}>Generate Outpass</h5>
+          <h5 className="card-title" onClick={() => navigate("/outpass")}>Generate Outpass</h5>
           <p className="card-text">
             Create outpasses efficiently to save time.
           </p>

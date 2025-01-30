@@ -1,48 +1,47 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Navigate, Link } from 'react-router-dom';
+import React from "react";
+import {BrowserRouter as Router, Routes, Route, Navigate, Link} from "react-router-dom";
 import Login from "./components/Login";
-import Signup from './components/Signup';
-import Homepage from './components/user/Homepage';
-import Adminhome from './components/admin/Adminhome';
-import AdminTickets from "./components/admin/AdminTickets";
-
-// import Userdashboard from './components/user/userdashboard';
-import UserProfile from './components/user/userprofile';
-import Outpass from './components/admin/outpass';
-import AboutPage from './components/user/AboutPage';
-import ExperiencesPage from './components/user/ExperiencesPage';
-import ResourcesPage from './components/user/ResourcesPage';
-import ContactPage from './components/user/ContactPage';
-
+import Signup from "./components/Signup";
+import Homepage from "./components/user/Homepage";
+import AdminHome from "./components/admin/AdminHome";
+import RoomAllocation from "./components/admin/RoomAllocation";
+import OutpassData from './components/admin/OutpassData';
+import ComplaintsPage from './components/admin/ComplaintsPage';
+// import AdminTickets from "./components/admin/AdminTickets";
+import UserProfile from "./components/user/Profile";
+// import Outpass from "./components/admin/Outpass";
+import AboutPage from "./components/user/AboutPage";
+import ExperiencesPage from "./components/user/ExperiencesPage";
+import ResourcesPage from "./components/user/ResourcesPage";
+import ContactPage from "./components/user/ContactPage";
 import BookRoom from "./components/user/BookRoom";
 import ChangeRoom from "./components/user/ChangeRoom";
 import GenerateOutPass from "./components/user/GenerateOutPass";
 import Complaints from "./components/user/Complaints";
 import VacateRoom from "./components/user/VacateRoom";
+
+import Profile from "./components/user/Profile"; // Adjust path if needed
+
+
+
 function App() {
   return (
     <Router>
-      
-      
       <Routes>
+        {/* Auth Routes */}
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+
+        {/* User Routes */}
         <Route path="/home" element={<Homepage />} />
-        <Route path="/admin" element={<Adminhome />} />
-        <Route path="/admin-tickets" element={<AdminTickets />} />
-        {/* <Route path="/user-dashboard" element={<Userdashboard />} /> */}
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/outpass" element={<Outpass />} />
         <Route path="/experiences" element={<ExperiencesPage />} />
         <Route path="/about" element={<AboutPage />} />
-<<<<<<< HEAD
         <Route path="/resources" element={<ResourcesPage />}/>
         <Route path="/contact" element={<ContactPage />}/>
-=======
+        
         <Route path="/about" element={<AboutPage />} />
         <Route pathh="/resources" element={<ResourcesPage />}/>
         <Route pathh="contact" element={<ContactPage />}/>
->>>>>>> 05c0bc64753f424e4b3453a5b009823d6016cb55
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/home" element={<Homepage />} />
         <Route path="/bookroom" element={<BookRoom />} />
@@ -50,6 +49,19 @@ function App() {
         <Route path="/outpass" element={<GenerateOutPass />} />
         <Route path="/complaints" element={<Complaints />} />
         <Route path="/vacate" element={<VacateRoom />} />
+        <Route path="/profile" element={<Profile />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminHome />} />
+        <Route path="/room-allocation" element={<RoomAllocation />} />
+        <Route path="/outpass-data" element={<OutpassData />} />
+        <Route path="/complaints-page" element={<ComplaintsPage />} />
+
+        {/* <Route path="/admin-tickets" element={<AdminTickets />} />
+        <Route path="/admin-outpass" element={<Outpass />} /> */}
+
+        {/* Catch all route */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

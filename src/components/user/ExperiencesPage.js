@@ -7,7 +7,8 @@ function ExperiencesPage(){
     <div>
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light px-5">
-        <a className="navbar-brand">Hostel Hub</a>
+      <a className="navbar-brand"> <b>Hostel Hub</b></a>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -40,23 +41,7 @@ function ExperiencesPage(){
               <p>
                 Students and admins can easily log in and access the features provided. Students can book rooms, request room changes, generate outpasses, submit complaints, and request to vacate rooms, while admins can manage all user requests efficiently.
               </p>
-              <button
-    style={{
-        color: "black",
-        border: "2px solid blue",
-        padding: "10px 20px",
-        fontSize: "16px",
-        fontWeight: "bold",
-        background: "transparent",
-        borderRadius: "8px",
-        cursor: "pointer",
-        transition: "0.3s",
-    }}
-    onMouseEnter={(e) => (e.target.style.background = "blue", e.target.style.color = "white")}
-    onMouseLeave={(e) => (e.target.style.background = "transparent", e.target.style.color = "black")}
->
-    Explore
-</button>
+              
 
             </div>
             <div className="col-md-6">
